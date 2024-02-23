@@ -181,3 +181,22 @@ Route::resource('photos', PhotoController::class)->only([
 Route::resource('photos', PhotoController::class)->except([
     'create', 'store', 'update', 'destroy'
 ]);
+
+// Route::get('/greeting', function () {
+//     return view('blog.hello', ['name' => 'Kresna']);
+// });
+
+// Run the code by typing the URL: localhost/PWL_2024/public/greeting. Pay attention to the page that appears and describe your observations
+// ANSWER : The page that appears is "Hello, Kresna" because the view is called with the name 'hello' and the name is passed as a parameter
+
+// Displaying a View from a Controller
+
+Route::get('/greeting', [WelcomeController::class, 'greeting']);
+
+// Run the code by typing the URL: localhost/PWL_2024/public/greeting. Pay attention to the page that appears and describe your observations    
+// ANSWER : The page that appears is "Hello, Sri Kresna Maha Dewa" because the controller is called with the name 'greeting', then the controller calls the view with the name 'hello'
+
+// Forward data to view practicum
+
+
+
